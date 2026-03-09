@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DataLearn Academy — Professional Data Analytics & Cybersecurity E-Learning Platform" />
+  <title>DataLearn Academy | E-Learning Platform</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1a472a;
+      --primary-lt: #2d6a4f;
+      --accent: #f4a228;
+      --dark: #0d1117;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; }
+    .navbar-brand span { color: var(--accent); }
+    .btn-primary { background-color: var(--primary); border-color: var(--primary); }
+    .btn-primary:hover { background-color: var(--primary-lt); border-color: var(--primary-lt); }
+    .btn-outline-primary { color: var(--primary); border-color: var(--primary); }
+    .btn-outline-primary:hover { background-color: var(--primary); border-color: var(--primary); }
+    .hero-section { background: linear-gradient(135deg, var(--dark) 0%, #1a3a2a 100%); min-height: 90vh; display: flex; align-items: center; }
+    .hero-badge { background: rgba(244,162,40,0.15); color: var(--accent); border: 1px solid rgba(244,162,40,0.4); }
+    .feature-icon { width: 56px; height: 56px; background: rgba(26,71,42,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--primary); }
+    .course-card { transition: transform 0.2s, box-shadow 0.2s; border: 1px solid #e5e7eb; }
+    .course-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+    .badge-level { font-size: 0.72rem; }
+    .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--primary); }
+    .testimonial-card { background: #f8f9fa; border-radius: 12px; }
+    .avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+    footer { background-color: var(--dark); }
+    .footer-link { color: #9ca3af; text-decoration: none; font-size: 0.9rem; }
+    .footer-link:hover { color: white; }
+    .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 0.2rem rgba(26,71,42,0.25); }
+    .navbar { background-color: var(--dark) !important; }
+    .nav-link { color: rgba(255,255,255,0.8) !important; }
+    .nav-link:hover { color: var(--accent) !important; }
+    .section-title { position: relative; display: inline-block; }
+    .section-title::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 50px; height: 3px; background: var(--accent); border-radius: 2px; }
+    #contact { background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%); }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="index.html">
+        Data<span>Learn</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="courses.html" class="btn btn-primary ms-3 px-4">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section text-white py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="badge hero-badge px-3 py-2 mb-4 rounded-pill">
+            <i class="bi bi-stars me-1"></i> #1 Data &amp; Cybersecurity Platform
+          </span>
+          <h1 class="display-4 fw-bold mb-3">
+            Learn <span style="color:var(--accent)">Data Analytics</span><br />
+            &amp; Cybersecurity
+          </h1>
+          <p class="lead text-white-50 mb-4">
+            Master SQL, Tableau, Python, Machine Learning, and Cyber Defence with 
+            industry-certified courses taught by working professionals.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="courses.html" class="btn btn-primary btn-lg px-5">Browse Courses</a>
+            <a href="about.html" class="btn btn-outline-light btn-lg">Learn More</a>
+          </div>
+          <div class="d-flex gap-4 mt-5">
+            <div>
+              <div class="fw-bold fs-4 text-white">12K+</div>
+              <div class="text-white-50 small">Students</div>
+            </div>
+            <div class="border-start border-secondary ps-4">
+              <div class="fw-bold fs-4 text-white">50+</div>
+              <div class="text-white-50 small">Courses</div>
+            </div>
+            <div class="border-start border-secondary ps-4">
+              <div class="fw-bold fs-4 text-white">95%</div>
+              <div class="text-white-50 small">Completion Rate</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block text-center">
+          <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:20px; padding: 3rem 2rem;">
+            <i class="bi bi-graph-up-arrow" style="font-size:7rem; color:var(--accent); opacity:0.9;"></i>
+            <p class="text-white-50 mt-3 mb-0">Industry-relevant curriculum updated quarterly</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <section class="py-5 bg-white border-bottom">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-6 col-md-3">
+          <div class="stat-number">12,000+</div>
+          <p class="text-muted mb-0">Enrolled Students</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-number">50+</div>
+          <p class="text-muted mb-0">Expert Courses</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-number">30+</div>
+          <p class="text-muted mb-0">Certifications</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-number">4.8★</div>
+          <p class="text-muted mb-0">Average Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="py-5 bg-light">
+    <div class="container py-3">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold section-title">Why DataLearn?</h2>
+        <p class="text-muted mt-3 col-md-6 mx-auto">Everything you need to build a successful career in data and cybersecurity.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="d-flex gap-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-laptop"></i></div>
+            <div>
+              <h5 class="fw-semibold">Learn at Your Pace</h5>
+              <p class="text-muted mb-0">Access all course materials 24/7. Resume any time from any device.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex gap-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-award"></i></div>
+            <div>
+              <h5 class="fw-semibold">Industry Certificates</h5>
+              <p class="text-muted mb-0">Earn certificates recognised by top tech companies worldwide.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex gap-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-people"></i></div>
+            <div>
+              <h5 class="fw-semibold">Expert Instructors</h5>
+              <p class="text-muted mb-0">Learn from working professionals with real-world project experience.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex gap-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-code-slash"></i></div>
+            <div>
+              <h5 class="fw-semibold">Hands-on Projects</h5>
+              <p class="text-muted mb-0">Build portfolio projects using SQL, Python, Tableau, and more.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex gap-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-shield-check"></i></div>
+            <div>
+              <h5 class="fw-semibold">Cybersecurity Track</h5>
+              <p class="text-muted mb-0">Dedicated cyber defence, ESG, and network security curriculum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex gap-3">
+            <div class="feature-icon flex-shrink-0"><i class="bi bi-bar-chart-line"></i></div>
+            <div>
+              <h5 class="fw-semibold">Progress Analytics</h5>
+              <p class="text-muted mb-0">Track your learning with detailed dashboards and performance reports.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED COURSES -->
+  <section class="py-5">
+    <div class="container py-3">
+      <div class="d-flex justify-content-between align-items-center mb-5">
+        <h2 class="fw-bold section-title mb-0">Featured Courses</h2>
+        <a href="courses.html" class="btn btn-outline-primary">View All <i class="bi bi-arrow-right ms-1"></i></a>
+      </div>
+      <div class="row g-4">
+        <!-- Course 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 course-card rounded-3 overflow-hidden">
+            <div style="height:150px; background:linear-gradient(135deg,#1a472a,#2d6a4f); display:flex; align-items:center; justify-content:center;">
+              <i class="bi bi-database-fill" style="font-size:4rem; color:rgba(255,255,255,0.3);"></i>
+            </div>
+            <div class="card-body">
+              <div class="d-flex gap-2 mb-2">
+                <span class="badge bg-success badge-level">Beginner</span>
+                <span class="badge bg-light text-dark badge-level">SQL</span>
+              </div>
+              <h5 class="card-title fw-semibold">SQL for Data Analytics</h5>
+              <p class="card-text text-muted small">Master SQL from basics to advanced queries for real-world data analysis workflows.</p>
+            </div>
+            <div class="card-footer bg-white border-top d-flex justify-content-between align-items-center">
+              <span class="fw-bold" style="color:var(--primary)">Free</span>
+              <a href="courses.html" class="btn btn-sm btn-primary">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 course-card rounded-3 overflow-hidden">
+            <div style="height:150px; background:linear-gradient(135deg,#1b4332,#40916c); display:flex; align-items:center; justify-content:center;">
+              <i class="bi bi-bar-chart-fill" style="font-size:4rem; color:rgba(255,255,255,0.3);"></i>
+            </div>
+            <div class="card-body">
+              <div class="d-flex gap-2 mb-2">
+                <span class="badge bg-warning text-dark badge-level">Intermediate</span>
+                <span class="badge bg-light text-dark badge-level">Tableau</span>
+              </div>
+              <h5 class="card-title fw-semibold">Data Visualisation with Tableau</h5>
+              <p class="card-text text-muted small">Create compelling dashboards and reports that tell data stories effectively.</p>
+            </div>
+            <div class="card-footer bg-white border-top d-flex justify-content-between align-items-center">
+              <span class="fw-bold" style="color:var(--primary)">₹1,299</span>
+              <a href="courses.html" class="btn btn-sm btn-primary">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Course 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 course-card rounded-3 overflow-hidden">
+            <div style="height:150px; background:linear-gradient(135deg,#1c3144,#2e4057); display:flex; align-items:center; justify-content:center;">
+              <i class="bi bi-shield-lock-fill" style="font-size:4rem; color:rgba(255,255,255,0.3);"></i>
+            </div>
+            <div class="card-body">
+              <div class="d-flex gap-2 mb-2">
+                <span class="badge bg-danger badge-level">Advanced</span>
+                <span class="badge bg-light text-dark badge-level">Cybersecurity</span>
+              </div>
+              <h5 class="card-title fw-semibold">Cybersecurity Fundamentals</h5>
+              <p class="card-text text-muted small">Network security, threat analysis, ESG compliance, and cyber defence strategies.</p>
+            </div>
+            <div class="card-footer bg-white border-top d-flex justify-content-between align-items-center">
+              <span class="fw-bold" style="color:var(--primary)">₹1,999</span>
+              <a href="courses.html" class="btn btn-sm btn-primary">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-5 bg-light">
+    <div class="container py-3">
+      <h2 class="fw-bold section-title text-center mb-5">Student Reviews</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testimonial-card p-4 h-100">
+            <div class="mb-3 text-warning">★★★★★</div>
+            <p class="fst-italic text-muted">"The SQL and Tableau courses helped me land my first data analyst role within 3 months of completing the programme."</p>
+            <div class="d-flex align-items-center gap-3 mt-3">
+              <div class="avatar">R</div>
+              <div><strong>Rahul M.</strong><br /><small class="text-muted">Data Analyst, Bangalore</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card p-4 h-100">
+            <div class="mb-3 text-warning">★★★★★</div>
+            <p class="fst-italic text-muted">"Cybersecurity course was exceptionally detailed. Practical labs and real scenarios made the learning stick."</p>
+            <div class="d-flex align-items-center gap-3 mt-3">
+              <div class="avatar">P</div>
+              <div><strong>Priya K.</strong><br /><small class="text-muted">Security Analyst, Kochi</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card p-4 h-100">
+            <div class="mb-3 text-warning">★★★★☆</div>
+            <p class="fst-italic text-muted">"Best platform for Python and ML. The instructors explain complex concepts in a very practical, beginner-friendly manner."</p>
+            <div class="d-flex align-items-center gap-3 mt-3">
+              <div class="avatar">A</div>
+              <div><strong>Arun S.</strong><br /><small class="text-muted">ML Engineer, Hyderabad</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section id="contact" class="py-5">
+    <div class="container py-3">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 text-center mb-5">
+          <h2 class="fw-bold section-title">Get in Touch</h2>
+          <p class="text-muted mt-3">Have questions? We're happy to help you find the right course for your goals.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card shadow-sm rounded-3 p-4">
+            <div id="formSuccess" class="alert alert-success d-none" role="alert">
+              <i class="bi bi-check-circle me-2"></i> Thank you! We'll get back to you shortly.
+            </div>
+            <div id="contactForm">
+              <div class="mb-3">
+                <label for="contactName" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+                <input type="text" id="contactName" class="form-control" placeholder="Your full name" />
+                <div id="nameError" class="text-danger small d-none mt-1">Please enter your name.</div>
+              </div>
+              <div class="mb-3">
+                <label for="contactEmail" class="form-label fw-semibold">Email Address <span class="text-danger">*</span></label>
+                <input type="email" id="contactEmail" class="form-control" placeholder="you@example.com" />
+                <div id="emailError" class="text-danger small d-none mt-1">Please enter a valid email address.</div>
+              </div>
+              <div class="mb-3">
+                <label for="contactMessage" class="form-label fw-semibold">Message</label>
+                <textarea id="contactMessage" class="form-control" rows="4" placeholder="Tell us how we can help..."></textarea>
+              </div>
+              <button type="button" id="submitBtn" class="btn btn-primary w-100 py-2 fw-semibold" onclick="validateForm()">
+                <i class="bi bi-send me-2"></i>Send Message
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="ps-lg-4">
+            <h5 class="fw-semibold mb-4">Contact Details</h5>
+            <div class="d-flex gap-3 mb-3">
+              <div class="feature-icon flex-shrink-0" style="width:44px;height:44px;"><i class="bi bi-envelope"></i></div>
+              <div><strong>Email</strong><br /><a href="mailto:info@datalearn.academy" class="text-muted">info@datalearn.academy</a></div>
+            </div>
+            <div class="d-flex gap-3 mb-3">
+              <div class="feature-icon flex-shrink-0" style="width:44px;height:44px;"><i class="bi bi-telephone"></i></div>
+              <div><strong>Phone</strong><br /><span class="text-muted">+91 98765 43210</span></div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="feature-icon flex-shrink-0" style="width:44px;height:44px;"><i class="bi bi-geo-alt"></i></div>
+              <div><strong>Location</strong><br /><span class="text-muted">Kochi, Kerala, India</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-5 text-white">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-md-4">
+          <h5 class="fw-bold mb-3">Data<span style="color:var(--accent)">Learn</span></h5>
+          <p class="text-secondary small">Professional e-learning platform for Data Analytics and Cybersecurity. Build skills that matter.</p>
+        </div>
+        <div class="col-md-2">
+          <h6 class="text-white mb-3">Platform</h6>
+          <ul class="list-unstyled">
+            <li class="mb-1"><a href="courses.html" class="footer-link">Courses</a></li>
+            <li class="mb-1"><a href="about.html" class="footer-link">About Us</a></li>
+            <li class="mb-1"><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-white mb-3">Courses</h6>
+          <ul class="list-unstyled">
+            <li class="mb-1"><a href="courses.html" class="footer-link">SQL Analytics</a></li>
+            <li class="mb-1"><a href="courses.html" class="footer-link">Tableau</a></li>
+            <li class="mb-1"><a href="courses.html" class="footer-link">Python for Data Science</a></li>
+            <li class="mb-1"><a href="courses.html" class="footer-link">Cybersecurity</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="text-white mb-3">Follow Us</h6>
+          <div class="d-flex gap-2">
+            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary" />
+      <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <p class="text-secondary small mb-0">&copy; 2025 DataLearn Academy. All rights reserved.</p>
+        <p class="text-secondary small mb-0">Built with Bootstrap 5</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function validateForm() {
+      var name = document.getElementById('contactName').value.trim();
+      var email = document.getElementById('contactEmail').value.trim();
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var valid = true;
+
+      document.getElementById('nameError').classList.add('d-none');
+      document.getElementById('emailError').classList.add('d-none');
+      document.getElementById('contactName').classList.remove('is-invalid');
+      document.getElementById('contactEmail').classList.remove('is-invalid');
+
+      if (!name) {
+        document.getElementById('nameError').classList.remove('d-none');
+        document.getElementById('contactName').classList.add('is-invalid');
+        valid = false;
+      }
+      if (!emailPattern.test(email)) {
+        document.getElementById('emailError').classList.remove('d-none');
+        document.getElementById('contactEmail').classList.add('is-invalid');
+        valid = false;
+      }
+      if (valid) {
+        document.getElementById('contactForm').classList.add('d-none');
+        document.getElementById('formSuccess').classList.remove('d-none');
+      }
+    }
+  </script>
+
+</body>
+</html>
